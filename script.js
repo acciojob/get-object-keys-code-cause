@@ -1,30 +1,12 @@
-// //your JS code here. If required.
-// const student ={
-// 	name: "Ashish",
-// 	age: 18
-// }
-
-// function getKeys(obj){
-// 	return Object.keys(obj);
-// }
-
-// console.log(getKeys(student));
-
-
-
-
-
-
-
-// Define function first
-function getKeys(obj) {
-  return Object.keys(obj);
-}
-
-// Create student object with only "name" property
+// Create the student object with getKeys method
 const student = {
-  name: "John"
+  name: "John",
+  age: 30,
+  city: "New York",
+  getKeys: function() {
+    return Object.keys(this);
+  }
 };
 
 // Test the function
-console.log(getKeys(student)); // Expected output: ["name"]
+console.log(student.getKeys()); // Output: ["name", "age", "city"]
